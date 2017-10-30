@@ -1,0 +1,26 @@
+===================SIGIT==================
+Menambahkan dan merubah beberapa kolom
+
+trx_recipe_detail
+	modify recipe_qty -> double
+
+inv_purchase_order_detail
+	add ipod_harga_beli
+
+inv_receive_item
+	add iri_total, iri_discount
+
+inv_item_master
+	im_item_price_buy -> default 0.00
+	im_item_price -> default 0.00
+
+mst_adm_fee
+	inser data
+
+sys_menu
+	insert menu to add daftar pemeriksaan di labs dan radiologi
+
+====================IBO=====================
+change log :
+- alter table ptn_social_data dan ptn_family. menambahkan field fm_id,sd_title,sd_card_number,sd_barcode(url menuju image barcode)
+- warning! sql ptn_family_after akan menghapus (drop) table ptn_family dan menggantinya dengan format yang baru!

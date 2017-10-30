@@ -1,0 +1,6 @@
+mst_treathment
+- mengupdate id poli yang 0 jadi 100
+- mengupdate id poli yang igd jadi 12
+
+mst_poly
+- update id poli: semua poli jadi 100

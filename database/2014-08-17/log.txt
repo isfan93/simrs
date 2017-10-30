@@ -1,0 +1,23 @@
+mst_service: id saya ganti int + autoincreament
+
+
+sigit hanafi
+
+MST SERVICE
+	add mst_service with biaya administrasi umum
+	Master biaya administrasi umum
+
+TRX_ADM_FEE
+	add table trx_adm_fee
+
+MST_ADM_FEE
+	add table mst_adm_fee
+
+trx_recipe_detail
+	modify, remove recipe_item_price
+
+trx_diagnosa_treathment_detail
+	modify, remove dat_paramedic_price, dat_item_price
+
+trx_lab_treatment
+	remove colom ds_name, ds_paramedic_price, ds_price

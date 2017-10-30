@@ -1,0 +1,8 @@
+====================sigit================
+tambah tabel racikan
+tambah tabel detail racikan
+modify table inv_item_stok (istok_qty -> double 10,2)
+modify table trx_diagnosa_treathment
+modify table trx_diagnosa_treathment_detail
+modify table racikan add qty double
+modify table trx_racikan

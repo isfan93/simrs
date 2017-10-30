@@ -1,0 +1,5 @@
+--hendri--
+tinggal di run aja,hehe
+
+ALTER TABLE `db_simrsih_baru`.`map_mst_lab` ADD COLUMN `id_map` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY(`id_map`);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_lab_treathment_gol','Data Golongan Lab','1','7',NULL,CURRENT_TIMESTAMP);

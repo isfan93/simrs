@@ -1,0 +1,5 @@
+====================IBO=====================
+change log :
+- menambah tabel mst_family_relation
+- mengubah modi_datetime pada mst_marital_st untuk update on current timestamp
+====================IBO=====================

@@ -1,0 +1,6 @@
+====================IBO=====================
+change log :
+- menonaktifkan status pada menu pendaftaran baru, daftar pasien, igd pada table sysmenu
+- menambahkan table mst_marital_st untuk menyimpan status pernikahan.
+- melakukan reindexing pada table mst_province agar sesuai dengan id pada table mst_regency
+====================IBO=====================

@@ -1,0 +1,3 @@
+INSERT INTO `sys_module`(`module_id`,`module_name`,`module_url`,`status`,`modi_id`,`modi_datetime`) VALUES ( NULL,'keuangan','keuangan','1',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','keuangan/expenses','Pencatatan Pengeluaran','1','14',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_module_role`(`mr_id`,`module_id`,`group_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'14','1',NULL,CURRENT_TIMESTAMP);

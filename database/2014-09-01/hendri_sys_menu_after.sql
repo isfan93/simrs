@@ -1,0 +1,6 @@
+UPDATE `sys_menu` SET `menu_id`='64',`menu_parent`='0',`menu_url`='master/data_supplier',`menu_name`='Data Supplier',`menu_status`='1',`modul_id`='7',`modi_id`=NULL WHERE `menu_id`='64';
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_tindakan_lab','Data Tindakan Lab','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_pavillion','Data Pavillion','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_service','Data Pelayanan','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_adm_fee','Data Tarif Administrasi','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_lab_treathment_detail','Data Detail Tindakan Lab','1','7',NULL,CURRENT_TIMESTAMP);

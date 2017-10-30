@@ -1,0 +1,8 @@
+==================SIGIT==================
+
+sys_menu
+	- insert menu to history resep
+
+trx_direct_buy
+	- add column tdb_discount, tdb_total
+	

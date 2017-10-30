@@ -1,0 +1,7 @@
+hendri_map_mst_treat_pack_new: 
+- tabel baru
+- hasil relasi many to many antara mst_treat_pack dengan mst_treathment
+hendri_mst_treat_pack_after: 
+- tabel baru, add aja
+hendri_sys_menu
+- insert menu baru

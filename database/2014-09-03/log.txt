@@ -1,0 +1,9 @@
+============SIGIT================
+sys_module
+	menambhakan modul rekam medis
+
+sys_menu
+	menambahkan menu rekmed
+
+sys_module_role
+	menambahkan hak akses untuk jike

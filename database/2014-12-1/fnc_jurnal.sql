@@ -1,0 +1,1 @@
+DROP TABLE fnc_jurnal;

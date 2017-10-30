@@ -1,0 +1,2 @@
+nambahin v_tindakan : table view untuk ngambil query server side di master tindakan
+nambahin mst_diagnosa : lenkap dengan ejaan bahasa indonesia. nambah struktur tabel juga

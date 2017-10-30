@@ -1,0 +1,2 @@
+penambahan menu pelaporan -> rekap pengeluaran inventori
+penambahan menu pelayanan informasi -> informasi ketersediaan bed

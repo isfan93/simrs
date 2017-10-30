@@ -1,0 +1,31 @@
+/*
+SQLyog Enterprise - MySQL GUI v8.05 
+MySQL - 5.6.16 : Database - db_simrsih_25sept
+*********************************************************************
+*/
+
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+/*Table structure for table `mst_racikan_fee` */
+
+DROP TABLE IF EXISTS `mst_racikan_fee`;
+
+CREATE TABLE `mst_racikan_fee` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(200) DEFAULT NULL,
+  `fee` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+
+/*Data for the table `mst_fee_racikan` */
+
+insert  into `mst_racikan_fee`(`id`,`description`,`fee`) values (1,'SERBUK 10 BUNGKUS',2500),(2,'SERBUK 10 - 20 BUNGKUS',4500),(3,'SERBUK 20 - 30 BUNGKUS',6000),(4,'1 BOTOL/FLS',1500),(5,'2 BOTOL/FLS',2500),(6,'3 BOTOL/FLS',3500),(7,'4 BOTOL/FLS',4500),(8,'KAPSUL 10 CAPS',5000),(9,'KAPSUL 10 - 20 CAPS',7500),(10,'KAPSUL 20 - 30 CAPS',10000),(11,'SALEP 1 POT 5 GR',2500),(12,'SALEP 2 POT 5 GR',3500),(13,'SALEP 3 POT 5 GR',4500),(14,'SALEP 1 POT 15 GR',3000),(15,'SALEP 2 POT 15 GR',5000),(16,'SALEP 3 POT 15 GR',6500),(17,'SALEP 1 POT 20 GR',3500),(18,'SALEP 2 POT 20 GR',5500),(19,'SALEP 3 POT 20 GR',6500),(20,'SALEP 1 POT 25 GR',7000),(21,'SALEP 2 POT 25 GR',11500),(22,'SALEP 3 POT 25 GR',16000),(23,'BEDAK TABUR 1 POT BEDAK 25G',7000),(24,'BEDAK TABUR 2 POT BEDAK 25G',11500),(25,'BEDAK TABUR 3 POT BEDAK 25G',16000);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

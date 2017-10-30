@@ -1,0 +1,85 @@
+log kerjaan
+17/8/2014
+06.00-07.00
+- menambah interface manajemen data pavillion
+16.00-17.xx
+- memperbaiki update jadwal dokter
+- menambah shift dokter
+- menambah interface manajemen data pelayanan
+21.00
+- menambah interface manajemen data tarif administrasi
+
+18/8/2014
+20.00
+- normalisasi tabel mst_lab_treathment,mst_lab_treathment_detail,map_mst_lab
+- interface mst_lab_treathment_detail
+- penambahan menu master/data_lab_treathment_detail pada sys_menu
+- perlu ditambah menu tambah detail lab treathment pada data/lab_treatment (!)
+
+19/8/2014
+20.00
+- edit tabel mst_suplyer
+- penambahan interface master/data_suplyer
+- perlu perbaikan di width tabel, dan button action (kolom paling kanan) (!)
+
+22/8/2014-23/8/2014
+- normalisasi tarif rsih
+- kurang interface mcu_detail dan menyesuaikan tabel master lainya (v)
+
+24/8/2014
+- penambahan interface mst_mcu_detail,mst_koefisien
+- penyesuaian tabel mst_treathment
+
+26/8/2014: kumpul @hendri_house
+
+28/8/2014
+- interface treathment paket
+- add mst_treat_pack
+- INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_treat_pack','Data Paket Tindakan','1','7',NULL,CURRENT_TIMESTAMP);
+
+29/8/2014
+- interface treathment detail paket (oke)
+- add map_mst_treat_pack (oke)
+- menambah field price pada mst_treat_pack (oke)
+
+30/8/2014
+- edit dan delete treat paket dan detailnya (oke)
+- ubah data_suplyer jadi data_supplier (oke)
+- data supplier belum beres interfacenya (oke)
+
+1/9/2014
+- perbaikan link menu (oke)
+- interface detail tindakan lab (oke)
+
+2/9/2014
+1. tambah detail lab (oke)
+2. kelompok radiologi atau lab (oke)
+3. interface golongan lab (oke)
+4. cetak lab, sort by golongan lab and id tindakan lab
+5. yg tampil di pendaftaran cuma dokter aja
+6. status diganti jabatan di menu master pegawai (oke)
+7. tindakan lab paket belum bisa nambah (oke)
+8. ambil data kabupaten di master supplier (oke)
+9. gudang farmasi/purchase order: petugasnya textbox (oke)
+
+3/9/2014
+1. discount paket tindakan
+2. tambah detail tindakan lab + delete (oke)
+3. urutkan detail tindakan lab dan stelah simpan hilang (oke)
+4. datanya dari sys_group, nyimpenya di sys_user (80%)->belum bisa login
+5. update tarif stelah dikali koefisien (oke)
+6. cek master data pegawai dan dokter, sd_employ_tp dari mana
+
+4/9/2014
+1. edit detail tindakan lab -> golongan,combobox (oke)
+2. paket data treathment dijadiin satu sm mst_treathment
+
+7/9/2014
+3. menu url master user dan service
+4. cek master data pegawai dan dokter, sd_employ_tp dari mana + interface (oke)
+5. edit adm_fee (oke)
+6. satuan obat (oke)
+7. location district and subnya
+8. ada permision khusus di action delete data pada menu tertentu
+9. tambah harga di master data obat (ngak usah)
+10. 4. datanya dari sys_group, nyimpenya di sys_user (oke)

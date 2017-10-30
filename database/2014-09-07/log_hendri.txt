@@ -1,0 +1,9 @@
+hendri
+============ penambahan menu
+1. insert menu satuan obat dan user group
+2. master obat, untuk klompok data obat seperti
+	- master data obat
+	- master data satuan obat
+3. alter tabel sys_user, default status 1
+4. alter tabel sys_group, default status 1
+5. alter tabel sys_module_role, nambah colom mr_id sebagai pk

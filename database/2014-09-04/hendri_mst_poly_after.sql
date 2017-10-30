@@ -1,0 +1,1 @@
+UPDATE `mst_poly` SET `pl_id`='100',`pl_name`='Semua Poli',`pl_description`=NULL,`pl_status`='1',`modi_id`=NULL WHERE `pl_id`='0';

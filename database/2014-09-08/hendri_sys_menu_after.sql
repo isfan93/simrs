@@ -1,0 +1,2 @@
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'79','master/data_class','Data Kelas Ruangan','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'79','master/data_bed','Data Bed','1','7',NULL,CURRENT_TIMESTAMP);

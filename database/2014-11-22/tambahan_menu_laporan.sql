@@ -1,0 +1,3 @@
+insert into `sys_menu` (`menu_id`, `menu_parent`, `menu_url`, `menu_name`, `menu_status`, `modul_id`, `modi_id`, `modi_datetime`) values('93','46','pelaporan/harian','Pendapatan Harian','1','8',NULL,'CURRENT_TIMESTAMP');
+insert into `sys_menu` (`menu_id`, `menu_parent`, `menu_url`, `menu_name`, `menu_status`, `modul_id`, `modi_id`, `modi_datetime`) values('94','46','pelaporan/jasa_dokter','Laporan Jasa Dokter','1','8',NULL,'CURRENT_TIMESTAMP');
+insert into `sys_menu` (`menu_id`, `menu_parent`, `menu_url`, `menu_name`, `menu_status`, `modul_id`, `modi_id`, `modi_datetime`) values('95','46','pelaporan/rawat_inap','Laporan Biaya Pasien Rawat Inap','1','8',NULL,'CURRENT_TIMESTAMP');

@@ -1,0 +1,48 @@
+/*[10:42:48 PM][  62 ms]*/ UPDATE `sys_menu` SET `menu_id`='7',`menu_parent`='0',`menu_url`='pelayanan_informasi/informasi_kamar',`menu_name`='informasi kamar',`menu_status`='0',`modul_id`='2',`modi_id`=NULL WHERE `menu_id`='7';
+/*[10:34:23 PM][ 344 ms]*/ UPDATE `com_modul` SET `modul_id`='7',`modul_nama`='master data',`modul_url`='master',`modul_icon`='',`status`='1' WHERE `modul_id`='7';
+/*[10:25:32 PM][  78 ms]*/ UPDATE `sys_menu` SET `menu_id`='8',`menu_parent`='0',`menu_url`='pelayanan_informasi/informasi_paket',`menu_name`='informasi paket',`menu_status`='0',`modul_id`='2',`modi_id`=NULL WHERE `menu_id`='8';
+/*[12:40:04 AM][ 203 ms]*/ UPDATE `com_menu` SET `menu_id`='22',`modul_id`='7',`menu_nama`='data dokter',`menu_url`='master/data_dokter',`menu_icon`=NULL,`menu_parent`='',`status`='1' WHERE `menu_id`='22';
+/*[12:40:13 AM][  94 ms]*/ UPDATE `com_menu` SET `menu_id`='23',`modul_id`='7',`menu_nama`='data tindakan',`menu_url`='master/data_tindakan',`menu_icon`=NULL,`menu_parent`='',`status`='1' WHERE `menu_id`='23';
+/*[12:40:31 AM][ 172 ms]*/ INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','data diagnosa','master/data_diagnosa',NULL,NULL,'1');
+/*[12:44:39 AM][ 109 ms]*/ INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','data obat','master/data_obat',NULL,NULL,'1');
+/*[12:45:15 AM][   0 ms]*/ INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','',NULL,NULL,NULL,NULL);
+/*[12:45:22 AM][   0 ms]*/ INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','',NULL,NULL,NULL,NULL);
+/*[12:45:28 AM][  94 ms]*/ INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','daag','dasa',NULL,NULL,'1');
+/*[12:45:33 AM][ 219 ms]*/ DELETE FROM `com_menu` WHERE `menu_id`='26';
+/*[12:46:45 AM][  78 ms]*/ INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','data pegawai','master/data_pegawai',NULL,NULL,'1');
+/*[12:52:23 AM][ 110 ms]*/ UPDATE `sys_menu` SET `menu_id`='25',`menu_parent`='0',`menu_url`='master/data_dokter',`menu_name`='data dokter',`menu_status`='1',`modul_id`='7',`modi_id`=NULL WHERE `menu_id`='25';
+/*[12:52:30 AM][ 110 ms]*/ UPDATE `sys_menu` SET `menu_id`='26',`menu_parent`='0',`menu_url`='master/data_tindakan',`menu_name`='data tindakan',`menu_status`='1',`modul_id`='7',`modi_id`=NULL WHERE `menu_id`='26';
+/*[12:52:47 AM][ 125 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_diagnosa','data diagnosa','1','7',NULL,CURRENT_TIMESTAMP);
+/*[12:52:50 AM][   0 ms]*/ UPDATE `sys_menu` SET `menu_id`='27',`menu_parent`='0',`menu_url`='master/data_diagnosa',`menu_name`='data diagnosa',`menu_status`='1',`modul_id`='7',`modi_id`=NULL WHERE `menu_id`='27';
+/*[12:53:11 AM][  78 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_obat','data obat','1','7',NULL,CURRENT_TIMESTAMP);
+/*[12:53:36 AM][  62 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_pegawai','data pegawa','1','7',NULL,CURRENT_TIMESTAMP);
+
+//5 juli 2014
+/*[2:22:04 PM][1922 ms]*/ CREATE TABLE `simrs_rso`.`mst_type_user`( `id_type_user` INT NOT NULL AUTO_INCREMENT , `description` VARCHAR(50) , PRIMARY KEY (`id_type_user`))  ;
+/*[2:22:06 PM][ 672 ms]*/ SHOW FULL TABLES FROM `simrs_rso` WHERE table_type = 'BASE TABLE';
+/*[2:22:06 PM][ 203 ms]*/ SHOW FULL FIELDS FROM `simrs_rso`.`mst_type_user`;
+/*[2:22:06 PM][  16 ms]*/ SHOW KEYS FROM `simrs_rso`.`mst_type_user`;
+/*[2:22:06 PM][   0 ms]*/ SELECT * FROM `simrs_rso`.`mst_type_user`;
+/*[2:22:14 PM][  62 ms]*/ INSERT INTO `mst_type_user`(`id_type_user`,`description`) VALUES ( NULL,'dokter');
+/*[2:22:27 PM][ 109 ms]*/ INSERT INTO `mst_type_user`(`id_type_user`,`description`) VALUES ( NULL,'rekam medis');
+/*[2:22:31 PM][  94 ms]*/ INSERT INTO `mst_type_user`(`id_type_user`,`description`) VALUES ( NULL,'kasir');
+/*[2:22:36 PM][  63 ms]*/ INSERT INTO `mst_type_user`(`id_type_user`,`description`) VALUES ( NULL,'apoteker');
+/*[2:23:00 PM][ 109 ms]*/ INSERT INTO `mst_type_user`(`id_type_user`,`description`) VALUES ( NULL,'receptionist');
+/*[2:37:58 PM][ 110 ms]*/ UPDATE `sys_menu` SET `menu_id`='25',`menu_parent`='0',`menu_url`='master/data_dokter',`menu_name`='data dokter',`menu_status`='0',`modul_id`='7',`modi_id`=NULL WHERE `menu_id`='25';
+
+//6 juli 2014
+/*[9:57:42 PM][1563 ms]*/ CREATE TABLE `simrs_rso`.`mst_employer` ENGINE=INNODB COLLATE = latin1_swedish_ci COMMENT = '' SELECT `sd_rekmed`, `sd_name`, `sd_sex`, `sd_place_of_birth`, `sd_date_of_birth`, `sd_age`, `sd_blood_tp`, `sd_address`, `sd_rt_rw`, `sd_reg_desa`, `sd_reg_kec`, `sd_reg_kab`, `sd_reg_prov`, `sd_citizen`, `sd_marital_st`, `sd_religion`, `sd_education`, `sd_occupation`, `sd_telp`, `sd_reg_date`, `sd_status`, `modi_id`, `modi_datetime`, `sd_reg_street` FROM `simrs_rso`.`ptn_social_data` WHERE 1 = 0;
+
+//7 juli 2014
+/*[11:53:06 PM][1532 ms]*/ ALTER TABLE `simrs_rso`.`mst_treathment` ADD COLUMN `description` VARCHAR(255) NULL AFTER `treat_name`, ADD COLUMN `poli` INT(2) NULL AFTER `description`;
+
+//
+INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','data tindakan','master/data_tindakan',NULL,NULL,'1');
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_tindakan','data tindakan','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','data user','master/data_user',NULL,NULL,'1');
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_user','data user','1','7',NULL,CURRENT_TIMESTAMP);
+INSERT INTO `com_menu`(`menu_id`,`modul_id`,`menu_nama`,`menu_url`,`menu_icon`,`menu_parent`,`status`) VALUES ( NULL,'7','data diagnosa','master/data_diagnosa',NULL,NULL,'1');
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_diagnosa','data diagnosa','1','7',NULL,CURRENT_TIMESTAMP);
+
+//12 juli 2014
+ALTER TABLE `simrs_rso`.`mst_diagnosa` ADD COLUMN `description` VARCHAR(255) NULL AFTER `diag_name`;

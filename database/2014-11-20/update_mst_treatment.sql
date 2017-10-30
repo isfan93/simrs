@@ -1,0 +1,1 @@
+ALTER TABLE `mst_treathment` ADD COLUMN `treat_status` INT DEFAULT '1' NULL AFTER `treat_paramedic_price`, ADD COLUMN `modi_id` INT NULL AFTER `treat_status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`,CHANGE `treat_paramedic_price` `treat_paramedic_price` BIGINT(20) NULL ;

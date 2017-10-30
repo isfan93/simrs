@@ -1,0 +1,1 @@
+UPDATE `sys_menu` SET `menu_id`='64',`menu_parent`='0',`menu_url`='master/data_supplier',`menu_name`='Data Supplier',`menu_status`='1',`modul_id`='7',`modi_id`=NULL WHERE `menu_id`='64';

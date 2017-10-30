@@ -1,0 +1,2 @@
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'61','master/data_golongan_obat','Data Golongan Obat','1','9',NULL,CURRENT_TIMESTAMP);
+ALTER TABLE `mst_golongan_inv` CHANGE `gol_status` `gol_status` CHAR(1) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT '1' NULL ;

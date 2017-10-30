@@ -1,0 +1,230 @@
+master tindakan
+id,nama,harga
+koefiien tindakan
+
+mst_suplyer
+mst_type_inv
+mst_bill >> mst_service
+<hr>: disamakan dengan menu master obat
+
+pertanyaan:
+1. mst_supplier:
+	msup_id: KF ?
+2. detail tindakan lab interfacenya enaknya mau gmn
+3. master tarif
+	- tarif lab
+	- tarif tindakan
+		- poli
+			- koefisien: 0.45
+	- tarif sewa kamar dan administrasi
+	- tarif sewa alat
+=============
+mst_adm_fee(oke)
+mst_class (oke)
+mst_koefisien_fee(oke)
+mst_treathment_fee(oke)
+mst_mcu_detail (oke)
+
+/*[7:40:51 AM][ 281 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_koefisien_fee','Data Koefisien Tarif Tindakan','1','7',NULL,CURRENT_TIMESTAMP);
+/*[7:55:37 AM][  62 ms]*/ UPDATE `mst_poly` SET `pl_id`='0',`pl_name`='Semua Poli',`pl_description`=NULL,`pl_status`='1',`modi_id`=NULL WHERE `pl_id`='0';
+/*[8:28:11 AM][  78 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','master/data_mcu_detail','Data Detail MCU','1','7',NULL,CURRENT_TIMESTAMP);
+
+beda mst_service sm mst_adm_fee ?
+
+==================
+1. tarif konsultasi dihilangkan
+2. buat interface paket tindakan
+3. 
+
+=================== 2 september 2014
+1. tambah detail lab (oke)
+2. kelompok radiologi atau lab (oke)
+3. interface golongan lab (oke)
+4. cetak lab, sort by golongan lab and id tindakan lab
+5. yg tampil di pendaftaran cuma dokter aja
+6. status diganti jabatan di menu master pegawai (oke)
+7. tindakan lab paket belum bisa nambah (oke)
+8. ambil data kabupaten di master supplier (oke)
+9. gudang farmasi/purchase order: petugasnya textbox (oke)
+10. di pendaftaran ada tp diantrian poli ngak ada pasienya (lupakan)
+
+================= 3 september 2014
+1. discount paket tindakan
+2. tambah detail tindakan lab + delete (oke)
+3. urutkan detail tindakan lab dan stelah simpan hilang (oke)
+4. datanya dari sys_group, nyimpenya di sys_user (oke)
+5. update tarif stelah dikali koefisien (oke)
+6. 
+================ 4 september 2014
+1. edit detail tindakan lab -> golongan,combobox (oke)
+2. 
+================ 5 september 2014
+1. loader show tindakan
+2. paket data treathment dijadiin satu sm mst_treathment
+SELECT *
+FROM map_mst_treat_pack mtp
+JOIN mst_treathment mt1 ON(mt1.treat_id=mtp.pt_id)
+JOIN mst_treathment mt2 ON(mt2.treat_id=mtp.treat_id)
+
+================ 7 september 2014
+3. menu url master user dan service
+4. cek master data pegawai dan dokter, sd_employ_tp dari mana + interface (oke)
+5. edit adm_fee (oke)
+6. satuan obat (oke)
+7. location district and subnya
+8. ada permision khusus di action delete data pada menu tertentu
+9. tambah harga di master data obat (ngak usah)
+10. menu user group (oke)kurang delete
+
+=============== 8 september 2014
+1. unknown colom tdb_discount, di trx_direct_buy: belum update dari live (oke)
+2. mekanisme role back->table log
+3. interface mst_class n mst_bed (oke)
+
+=============== 11 september 2014
+1. delete user group masih error (oke)
+
+=============== 12 september 2014
+1. crud diagnosa (oke)
+2. penambahan buku petunjuk menu data diagnosa
+
+=============== 15 September 2014
+1. penambahan buku petunjuk menu tindakan, tindakan lab
+2. isian obat rep ky py?
+3. lebar kolom detail tindakan lab
+4. informasi kamar (oke)-> yang dilive belum
+=============== 18 september 2014
+1. update mst bed dkk
+2. update tampilan
+
+=============== 20 sept 2014
+1. user group default statuse 1 (oke)
+2. filter laporan, hari - bulan - tahun
+3. laporan kunjugan jg
+4. laporan apotek juga
+5. homebase ngak usah join (oke)
+
+=============== 25 september 2014
+1. laporan 10 penyakit terbesar
+2. laporan 10 tindakan
+3. laporan 10 obat terlaris
+
+=============== 26-27 september 2014
+1. data tindakan, diagnosa, obat ->serverside (oke)
+2. hapus,searh di group (80%)
+3. nambahin field bahasa indonesia mst_diagnosa (oke)
+4. nambahin tampilan master data tarif obat racikan (oke)
+
+=============== 26 Oktober 2014 ===========
+1. gawe format laporan
+2. interface hak akses by menu
+3. select2 neng master
+4. tampilan jadwal dokter lebih menarik (70%)
+5. data tarif fix
+
+=============== 15 November 2014 ==========
+1. modul pelayanan informasi:jadwal dokter (oke)
+2. modul pelaporan: hasil usaha dan rekap harian
+3. batal update diagnosa,data tindakan
+4. delete data diganti update status = 0
+	mst_poly:oke
+	mst_insurance: ALTER TABLE `db_simrsih_15nov`.`mst_insurance` ADD COLUMN `ins_status` INT(2) DEFAULT '1' NULL AFTER `ins_name`; : oke
+	mst_room: ALTER TABLE `db_simrsih_15nov`.`mst_room` ADD COLUMN `room_status` INT DEFAULT '1' NULL AFTER `pavillion_id`; oke
+	mst_pavilion: ALTER TABLE `db_simrsih_15nov`.`mst_pavillion` ADD COLUMN `pav_status` INT DEFAULT '1' NULL AFTER `pavillion_name`; oke
+	mst_service: ALTER TABLE `db_simrsih_15nov`.`mst_service` ADD COLUMN `svc_status` INT DEFAULT '1' NULL AFTER `service_name`; oke
+	mst_adm_fee: ALTER TABLE `db_simrsih_15nov`.`mst_adm_fee` CHANGE `adm_status` `adm_status` CHAR(1) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT '1' NOT NULL; oke
+	mst_class: ALTER TABLE `db_simrsih_15nov`.`mst_class` ADD COLUMN `class_status` INT DEFAULT '1' NULL AFTER `price_koef`; oke
+	mst_bed: tambahi edit ruangan
+	mst_employe: oke
+	trx_dokter_fee: oke
+	trx_dokter_sch: ALTER TABLE `db_simrsih_15nov`.`trx_dr_schedule` ADD COLUMN `tds_status` INT(2) DEFAULT '1' NULL AFTER `pl_id`; oke
+	mst_type_user: ALTER TABLE `db_simrsih_15nov`.`mst_type_user` ADD COLUMN `ts_status` INT DEFAULT '1' NULL AFTER `description`, ADD COLUMN `modi_id` INT NULL AFTER `ts_status`, ADD COLUMN `modi_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; oke
+	sys_user: oke
+	mst_treatment: ALTER TABLE `db_simrsih_15nov`.`mst_treathment` ADD COLUMN `treat_status` INT DEFAULT '1' NULL AFTER `treat_paramedic_price`, ADD COLUMN `modi_id` INT NULL AFTER `treat_status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`,CHANGE `treat_paramedic_price` `treat_paramedic_price` BIGINT(20) NULL ;
+		DELIMITER $$
+
+		DROP VIEW IF EXISTS `db_simrsih_15nov`.`v_tindakan`$$
+
+		CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_tindakan` AS 
+		SELECT `mt`.`treat_id` AS `treat_id`,`mt`.`treat_name` AS `treat_name`,`mt`.`koef_id` AS `koef_id`,
+		`mkf`.`koef_treathment` AS `koef_treathment`,`mp`.`pl_id` AS `pl_id`,`mp`.`pl_name` AS `pl_name`,
+		`mt`.`treat_master_fee` AS `treat_master_fee`,`mt`.`treat_item_price` AS `treat_item_price` 
+		FROM ((`mst_treathment` `mt` 
+		JOIN `mst_poly` `mp` ON((`mp`.`pl_id` = `mt`.`poli`))) 
+		JOIN `mst_koefisien_fee` `mkf` ON((`mkf`.`koef_id` = `mt`.`koef_id`))) 
+		WHERE mt.treat_status = 1
+		ORDER BY `mt`.`treat_id` DESC$$
+
+		DELIMITER ;
+		oke
+	mst_koefisien_fee: ALTER TABLE `db_simrsih_15nov`.`mst_koefisien_fee` ADD COLUMN `koef_status` INT DEFAULT '1' NULL AFTER `koef_value`; Oke
+	mst_treat_pack: ALTER TABLE `db_simrsih_15nov`.`mst_treat_pack` ADD COLUMN `pt_status` INT DEFAULT '1' NULL AFTER `price`, ADD COLUMN `modi_id` INT NULL AFTER `pt_status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; OKe
+	map_treat_pack: ALTER TABLE `db_simrsih_15nov`.`map_mst_treat_pack` ADD COLUMN `status` INT DEFAULT '1' NULL AFTER `treat_id`, ADD COLUMN `modi_id` INT NULL AFTER `status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; oke
+
+	mst_lab_treathment: ALTER TABLE `db_simrsih_15nov`.`mst_lab_treathment` ADD COLUMN `modi_id` INT NULL AFTER `ds_status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`;
+	map_mst_lab: ALTER TABLE `db_simrsih_15nov`.`map_mst_lab` ADD COLUMN `status` INT DEFAULT '1' NULL AFTER `dsd_id`, ADD COLUMN `modi_id` INT NULL AFTER `status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; Oke		
+
+	mst_lab_treathment_detail: ALTER TABLE `db_simrsih_15nov`.`mst_lab_treathment_detail` ADD COLUMN `modi_id` INT NULL AFTER `dsd_status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; oke
+
+	mst_lab_treathment_gol: ALTER TABLE `db_simrsih_15nov`.`mst_lab_treathment_gol` ADD COLUMN `status` INT DEFAULT '1' NULL AFTER `description`, ADD COLUMN `modi_id` INT NULL AFTER `status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; oke
+
+	mst_supplier: ALTER TABLE `db_simrsih_15nov`.`mst_supplier` ADD COLUMN `msup_status` INT DEFAULT '1' NULL AFTER `msup_npwp`; Oke
+
+	mst_type_inv: oke
+
+	mst_racikan_fee: ALTER TABLE `db_simrsih_15nov`.`mst_racikan_fee` ADD COLUMN `status` INT DEFAULT '1' NULL AFTER `fee`, ADD COLUMN `modi_id` INT NULL AFTER `status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`; oke
+
+	inv_item_master:
+	DELIMITER $$
+
+		DROP VIEW IF EXISTS `db_simrsih_15nov`.`v_obat`$$
+
+		CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_obat` AS 
+		SELECT `iim`.`im_id` AS `im_id`,`iim`.`im_unit` AS `im_unit`,`iim`.`im_komposisi` AS `im_komposisi`,
+		`iim`.`im_name` AS `im_name`,`iim`.`im_barcode` AS `im_barcode`,`iim`.`im_item_price_buy` AS `im_item_price_buy`,
+		`iim`.`im_item_price` AS `im_item_price`,`iim`.`im_item_price_package` AS `im_item_price_package`,
+		`iim`.`im_ppn` AS `im_ppn`,`iim`.`im_reorder_point` AS `im_reorder_point`,`iim`.`im_min_stock` AS `im_min_stock`,
+		`iim`.`im_max_stock` AS `im_max_stock`,`iim`.`im_status` AS `im_status`,`iim`.`modi_id` AS `modi_id`,
+		`iim`.`modi_datetime` AS `modi_datetime`,`iim`.`im_type` AS `im_type`,`iim`.`im_vat_status` AS `im_vat_status`,
+		`mti`.`mtype_name` AS `mtype_name` 
+		FROM (`inv_item_master` `iim` LEFT JOIN `mst_type_inv` `mti` ON((`mti`.`mtype_id` = `iim`.`im_unit`)))
+		WHERE iim.im_status = 1
+		$$
+
+		DELIMITER ;
+		oke
+	mst_diagnosa: ALTER TABLE `db_simrsih_15nov`.`mst_diagnosa` ADD COLUMN `diag_status` INT DEFAULT '1' NULL AFTER `indonesian`, ADD COLUMN `modi_id` INT NULL AFTER `diag_status`, ADD COLUMN `modi_datetime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL AFTER `modi_id`;
+
+	CREATE	VIEW v_diagnosa AS SELECT * FROM mst_diagnosa 
+			WHERE diag_status = 18
+			ORDER BY (diag_id) desc
+			
+5. autocomplate manajemen data user
+====================== 18 november 2014
+6. perbaikan data pegawai (85%)
+7. perbaikan master data harga jasa dokter
+	- pilih dokter pake select2 (oke)
+	- button tambah dokter masih error (oke)
+====================== 21 november 2014
+/*[9:43:32 PM][  78 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'46','pelaporan/keuangan/harian','Pendapatan Harian','1',NULL,NULL,CURRENT_TIMESTAMP);
+/*[9:43:39 PM][ 109 ms]*/ UPDATE `sys_menu` SET `menu_id`='93',`menu_parent`='46',`menu_url`='pelaporan/keuangan/harian',`menu_name`='Pendapatan Harian',`menu_status`='1',`modul_id`='9',`modi_id`=NULL WHERE `menu_id`='93';
+/*[9:44:27 PM][  78 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'0','pelaporan/keuangan/jasa_dokter','Laporan Jasa Dokter','1','9',NULL,CURRENT_TIMESTAMP);
+/*[9:44:30 PM][ 110 ms]*/ UPDATE `sys_menu` SET `menu_id`='94',`menu_parent`='46',`menu_url`='pelaporan/keuangan/jasa_dokter',`menu_name`='Laporan Jasa Dokter',`menu_status`='1',`modul_id`='9',`modi_id`=NULL WHERE `menu_id`='94';
+/*[9:51:02 PM][  63 ms]*/ INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'46','pelaporan/keuangan/rawat_inap','Laporan Biaya Pasien Rawat Inap','1',NULL,NULL,CURRENT_TIMESTAMP);
+/*[9:51:57 PM][ 359 ms]*/ UPDATE `sys_menu` SET `menu_id`='95',`menu_parent`='46',`menu_url`='pelaporan/keuangan/rawat_inap',`menu_name`='Laporan Biaya Pasien Rawat Inap',`menu_status`='1',`modul_id`='8',`modi_id`=NULL WHERE `menu_id`='95';
+/*[9:51:58 PM][  78 ms]*/ UPDATE `sys_menu` SET `menu_id`='94',`menu_parent`='46',`menu_url`='pelaporan/keuangan/jasa_dokter',`menu_name`='Laporan Jasa Dokter',`menu_status`='1',`modul_id`='8',`modi_id`=NULL WHERE `menu_id`='94';
+/*[9:51:59 PM][  47 ms]*/ UPDATE `sys_menu` SET `menu_id`='93',`menu_parent`='46',`menu_url`='pelaporan/keuangan/harian',`menu_name`='Pendapatan Harian',`menu_status`='1',`modul_id`='8',`modi_id`=NULL WHERE `menu_id`='93';
+
+8. pelaporan harian(oke:50%)
+	group by tanggal
+		detail by pasien
+9. pelaporan jasa dokter(oke:50%)
+	group by dokter and bulan
+		detail by pasien
+10. pelaporan rawat inap(oke:50%)
+	group by pasien
+		detail by tanggal and detail tindakan
+====================
+11. perbaikan master data jadwal dokter (oke)
+12. perbaikan master data manajemen user (oke)
+13. .btn_form hide -> .tambahData slideDown

@@ -1,0 +1,34 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class user_define_controller extends CI_Controller {
+
+	public function index(){
+		$data['main_view']	= 'menu/index';
+		$data['title']		= 'Title ';
+		$data['desc']		= 'Description. ';
+		$this->load->view('template',$data);
+	}
+
+	function create(){
+		$data = $this->input->post('ds');
+		$this->db->insert('', $data); 
+		$this->session->set_flashdata('message',array('success','Data berhasil di buat'));
+		redirect(cur_url(-1));
+	}
+
+	function update($id){
+		$data = $this->input->post('ds');	
+		$this->db->where('', $id);
+		$this->db->update('', $data); 
+		$this->session->set_flashdata('message',array('success','Data berhasil diperbarui'));
+		redirect(cur_url(-2));
+	}
+
+	function delete($id){
+		$data = array('status' => 0);
+		$this->db->where('', $id);
+		$this->db->update('', $data);
+		$this->session->set_flashdata('message',array('success','Data berhasil dihapus'));
+		redirect(cur_url(-2));
+	}
+}

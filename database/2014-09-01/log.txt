@@ -1,0 +1,3 @@
+sys_menu
+- update url data supllier
+- insert menu master pavillion, tarif pelayanan, detail lab, tindakan lab, data pelayanan

@@ -1,0 +1,13 @@
+ALTER TABLE trx_adm_fee MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_diagnosa_treathment MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_diagnosa_treathment_detail MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_medical MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_medical_anamnesa MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_medical_lab MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_medical_objective MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_medical_ptn_now MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_medical_subjective MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_racikan MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_recipe MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_recipe_detail MODIFY mdc_id VARCHAR(45);
+ALTER TABLE trx_reference MODIFY mdc_id VARCHAR(45);

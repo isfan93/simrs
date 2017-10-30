@@ -1,0 +1,2 @@
+<a href="<?=base_url()?>"><h1 class="logo">SIMRS.<span>IH</span></h1></a>
+<span class="slogan" style="font-weight: bold;color: white;font-size: 15px;font-style: normal;">Rumah Sakit Intan Husada</span>

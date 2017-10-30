@@ -1,0 +1,16 @@
+====================IBO=====================
+change log :
+- karena baru pake format yang standart jadi database _before tidak sempat terdokumentasi
+- semua list tabel di dalam folder adalah tabel yang pernah di tambah atau diupdate strukturnya
+- terdapat penambahan tabel: 
+	mst_employer sebagai master pegawai
+	mst_type_user sebagai master tipe pegawai,yaitu: dokter,rekamedis,resepsionis dll
+- terdapat perubahan struktur pada mst_diagnosa dan mst_treathment
+- terjadi penambahan modul dan menu pada tabel com_menu,com_modul dan sys_menu.
+- modul yang ditambah yaitu: manajemen data, dengan menu:
+	master data pegawai
+	master data tindakan
+	master data user
+	master data diagnosa
+
+====================IBO=====================

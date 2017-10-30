@@ -1,0 +1,1 @@
+INSERT INTO `sys_menu`(`menu_id`,`menu_parent`,`menu_url`,`menu_name`,`menu_status`,`modul_id`,`modi_id`,`modi_datetime`) VALUES ( NULL,'84','master/data_racikan_fee','Data Tarif Racikan Obat','1','9',NULL,CURRENT_TIMESTAMP);

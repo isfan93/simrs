@@ -1,0 +1,94 @@
+.nav-date{
+	/*width: 97%;*/
+height: 40px;
+margin-top: 20px;
+padding: 0px 20px;
+position: relative;
+font-size: 15px;
+}
+
+.box-next {
+width: 30px;
+height: 100%;
+opacity: 0.6;
+vertical-align: middle;
+background: #EEE url(../../images/next.png) no-repeat center center;
+border-left: 1px solid #DDD;
+}
+
+
+
+.nav-date a{
+	background-color: #eee;
+	border-radius: 5px;
+	padding: 5px;
+	color:#0282CE; 
+}
+ 
+.right-nav-date{
+ 	 
+	color: #0282CE;
+	 text-align: right;
+	float: right !important;
+	/*width: 30%;*/
+}
+
+.left-nav-date{
+ 
+	 
+	color: #0282CE;
+	 text-align: left;
+	float: left;
+	/*width: 30%;*/
+}
+
+.current-nav-date{
+	font-weight:bold;	
+	color: #0282CE;
+	 text-align:center;
+	float: left;
+	/*width: 30%;*/
+}
+
+.tgl-sekarang{
+
+}
+
+.show{
+	padding: 5px;
+	background-color: #eee;
+	border-radius: 5px;
+	font-style: normal;	
+}
+
+.pagination{
+	margin-bottom: 20px;
+}
+
+.frm_search .btn span {
+padding: 2px 10px;
+}
+
+ 
+	.frm_search input{margin-top:-1px; margin-left:2px}
+	.frm_search .btn{float:right;margin-left:5px}
+	.frm_search .btn span{padding:2px 10px;}
+	.search_choice a{font-weight:bold}
+	.search_choice a.active{color:#fb9338;border-bottom: 1px dashed #FB9338;}
+	.search_choice {float:right;margin-right:95px}
+	#advance{display:none;}
+	#filter{border-bottom: 1px dashed #DDD;}
+	#body_search{margin-top:10px}
+	.tname{font-size:110%}
+	#dyntable tbody tr td{border-right:none}
+	#dyntable tbody tr td + td + td{border-right:1px solid #DDD}
+	#dyntable tr:nth-child(even){
+		background:#F7F7F7;
+	}
+ .search2{
+ 
+ 	min-height: 65px;
+ }
+ 
+ 
+.ruang{float:none !important;}

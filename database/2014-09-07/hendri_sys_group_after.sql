@@ -1,0 +1,1 @@
+ALTER TABLE `sys_group` CHANGE `group_status` `group_status` INT(11) DEFAULT '1' NULL ;

@@ -1,0 +1,1 @@
+ALTER TABLE `inv_faktur_detail` ADD COLUMN `ifd_id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY(`ifd_id`);

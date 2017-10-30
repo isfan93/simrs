@@ -1,0 +1,62 @@
+#content{
+    min-height: 100%;
+}
+#sistem_footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    margin-bottom: 0px;
+    background: #34445e url(../images/default/topheaderbg.png);
+    padding: 14px 10px 0px 0px;
+    /* border-bottom: 5px solid #fb9337; */
+    color: #b3c2d6 !important;
+    font-size: 10px;
+    text-align: center;
+}
+
+.box-kajian{
+    height:180px;
+    background-color:#f9f9f9 !important;
+    padding:5px;
+    color: #666;
+    overflow-y:scroll;
+  }
+  .table-kajian td{
+    padding-left: 10px;
+  }
+.check{
+    margin-right: 2px;
+}
+
+.alert{
+    /*background-color: transparent;*/
+    border: 0px;
+}
+
+#gritter-notice-wrapper{
+    right: 13%;
+    top: 100px;
+}
+label{
+    display: inline-block;
+}
+.black_loader{
+    display: block;
+    opacity: 0.6;
+}
+
+.icon-menu{
+    font-size: 20px;
+    margin-top: -2px;
+    color: #FB9337;
+}
+
+.dataTables_scrollHeadInner{
+    width: 100% !important;
+}
+
+.tb_scrol{
+    width: 100% !important;
+    
+}

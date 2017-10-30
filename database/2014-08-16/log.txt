@@ -1,0 +1,7 @@
+====================IBO=====================
+change log :
+- menambahkan (sekaligus menghapus table yang ada sebelumnya) table mst_bed,mst_room,mst_class,mst_pavillion, trx_hospitalization
+- mengganti penamaan pada table mst_bill => mst_service dan menambahkan data sewa kamar
+- mengganti struktur pada table trx_visit_bill (table trx_visit_bill_detail dapat dihapus)
+- menambahkan data menu pendaftaran rawat inap pada sys_menu
+====================IBO=====================

@@ -1,0 +1,16 @@
+================ sigit ====================
+
+tambah user radiologi
+tambah akses module role untuk user radiologi
+tambah enum value di table trx_visit(visit_type) => 'rad' untuk radiologi
+tambah group user perawat
+tambah user perawat
+tambah akses module role untuk user perawat
+tambah sys_group untuk radiologi -> home base di lab/antrian
+edit tipe dan panjang kolom di panjangkan (dsupport_value (text))
+
+
+
+tambah tabel racikan
+tambah tabel detail racikan
+modify table inv_item_stok (istok_qty -> double 10,2)
